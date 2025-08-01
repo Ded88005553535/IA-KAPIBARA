@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="CSS.css" />
+  <title>Интересно</title>
+  <style>
+    .iimgg {
+      margin: 25px;
+    }
+
+    .gh {
+      color: black;
+      font-size: 20px;
+      text-align: justify;
+      margin: 10px;
+    }
+
+    .opezdal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      overflow: auto;
+
+      
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .opezdal.open {
+      display: flex;
+    }
+
+    .opezdal_in_opezdal {
+      width: 70%;
+      padding: 20px;
+      color: aliceblue;
+      background-color: #222;
+      border-radius: 8px;
+      max-height: 80vh;
+      overflow-y: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.7);
+    }
+
+    .buttonclose {
+      float: right;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="skibidi">
+    <div class="logo">
+      <img src="chess.png" width="300" height="100" alt="Логотип" />
+    </div>
+    <div class="list">
+      <a href="галерея.html">галерея</a>
+      <a href="расписание турниров.html">расписание турниров</a>
+      <a href="новости.html">новости</a>
+      <a href="index.html">главная</a>
+    </div>
+    <div class="basement"></div>
+    <div class="info">
+      <ul>
+        <li>Все права не защищены</li>
+        <li>Сайт специально создан для</li>
+        <li>ознакомления с основами сайта</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="basic">
+    <div class="menu">
+      <div>
+        <h1>Добро пожаловать в мир шахмат!</h1>
+        <ul>
+          <li class="gh">
+            Шахматы — это древняя интеллектуальная игра, которая развивает стратегическое мышление,
+            концентрацию и аналитические навыки. На нашем сайте вы найдете все необходимое для начинающих и
+            опытных игроков:
+            <a href="#" id="openmodel1">правила игры</a>, <a href="расписание турниров.html">турниры</a>, <a href="новости.html">новости</a> и <a href="https://rutube.ru/video/f3b615db135287a64584737e664e1e4b/?r=wd">обучающие материалы</a>.
+            Присоединяйтесь к сообществу шахматистов и совершенствуйте свои навыки!
+          </li>
+        </ul>
+        <img
+          src="cheese.png"
+          border="9"
+          width="500"
+          height="300"
+          alt="Изображение шахмат"
+          class="iimgg"
+        />
+      </div>
+    </div>
+  </div>
+
+
+  <div id="openmodel2" class="opezdal">
+    <div class="opezdal_in_opezdal">
+      <span class="buttonclose">
+        &#128179;
+      </span>
+<p>https://ru.wikipedia.org/wiki/Шахматы#Правила</p>
+<p>https://rutube.ru/video/f3b615db135287a64584737e664e1e4b/?r=wd</p>
+  </div>
+
+  <script>
+    const modal = document.getElementById("openmodel2");
+    const openLink = document.getElementById("openmodel1");
+    const closeSpan = modal.querySelector(".buttonclose");
+
+    openLink.addEventListener("click", function (e) {
+      e.preventDefault();
+      modal.classList.add("open");
+    });
+
+    closeSpan.addEventListener("click", function () {
+      modal.classList.remove("open");
+    });
+
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) {
+        modal.classList.remove("open");
+      }
+    });
+  </script>
+</body>
+</html>

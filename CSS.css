@@ -1,0 +1,31 @@
+.list{width: 100%;}/*display:flex;flex-direction:column;align-items:stretch ;*/
+*{padding:0;margin:0;box-sizing: border-box;font-family:Comic Sans MS,Comic Sans,cursive;text-align: center;}
+.list a{display: block;text-decoration:none;padding:15px 20px;transition: background 2.5s;font-size: 25px;}/*text-decoration:none;align-items:center; font-size: 20px;padding:2px auto;display: block;*/
+body{background-color: rgb(0, 0, 0);color: rgb(255, 255, 255);height:100vh;display:flex;}
+.info{margin-top:auto;background-color: rgb(0, 0, 0); padding:10px;list-style:none;}
+.list a:hover{background-color: rgb(0, 0, 0);}
+.info ul{list-style:none;}
+.menu{position: relative;align-items:center;margin-top:auto;list-style:none;margin-right:auto;}
+.imgg{display: none;}
+.imgg img{display: block;height: auto;width: 90%;margin-left: 40px;}
+
+.menu ul{list-style:none;}
+.next,.back{cursor: pointer;position:absolute;width: auto;color: rgb(66, 65, 65);top:50%;padding: 15px;margin-top: -20p;
+    user-select: none;-webkit-user-select:none;font-weight: bold;}
+.next{right: 0;}
+.back:hover{background-color: rgb(0, 0, 0);}
+.next:hover{background-color: rgb(0, 0, 0);}
+.back{left:0}
+.basicc{position:relative; margin-top: 17%; margin-left: 15%;max-width: 800px;}
+.skibidi{width: 300px;display:flex;flex-direction:column;align-items:center;background-color:rgb(255, 240, 225);}
+.basic{position: relative;padding: 40px;background-color: rgb(224, 139, 74);flex-grow: 1;margin:auto;height:100%;}
+table{width:100%;margin-top:20px; border-collapse:collapse;background-color: rgb(75, 75, 75); border-radius:10px;overflow:hidden; box-shadow:0px 4px 4px rgb(0,0,255, 0.1)}
+thead{background-color: rgb(0, 255, 0);}
+th{text-align:center;padding:10px}
+th:hover{background-color: rgb(0, 0, 0);transition: background 1s;}
+tr:nth-child(even){background-color:rgb(190, 190, 190);}
+.a{background-color: rgb(0, 0, 0);color:rgb(255, 255, 255);width:100%;padding:10px 10px;}
+.b{background-color: rgb(255, 255, 255);color: rgb(0, 0, 0);width:100%;padding:10px 10px;}
+.justify label{display: block;margin-bottom: 12px;}
+.justify input,.justify select{width: 250px;height:20px;margin-top: 10px;margin-bottom: 10px;}
+.justify button{padding: 10px;border-radius: 10px;cursor: pointer;}
