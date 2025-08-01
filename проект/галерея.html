@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="CSS.css">
+<title> интересно </title>
+</head>
+<body>
+<div class="skibidi">
+    <div class="logo">
+        <img src="chess.png" width="300px" height="100px">
+    </div>
+    <div class="list">
+            <a href="галерея.html">галерея</a>
+            <a href="расписание турниров.html">расписание турниров</a>
+            <a href="новости.html">новости</a>
+            <a href="index.html">главная</a>
+            <a href="https://rutube.ru/video/f3b615db135287a64584737e664e1e4b/?r=wd">секретка</a>
+    </div> 
+    <div class="basement">
+    </div>  
+    <div class="info">
+    <ul>  
+        <li>
+            все права не защищены
+        </li>
+        <li>
+           сайт специально создан для 
+        </li>
+        <li>
+           ознакомления с основами сайта
+        </li>
+    </ul>      
+    </div>
+</div>
+<div class="basic">
+  <div class="basicc">
+            <div class="imgg">
+                <img src="chess.png">
+            </div>
+            <div class="imgg">
+                <img src="chess.png">
+            </div>
+            <div class="imgg">
+                <img src="chess.png">
+            </div>
+            <div class="imgg">
+                <img src="chess.png">
+            </div>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <a class="back" onclick="plusSlides(-1)">&#10094;</a>
+            </div>
+</div>
+</body>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("imgg");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</html>
